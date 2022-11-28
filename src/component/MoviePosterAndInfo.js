@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { genres } from "../helper/Genres";
-import { View, TouchableWithoutFeedback, Text } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import MoviePoster from "./MoviePoster";
 import MovieRating from "./MovieDetail/MovieRating";
 import { black } from "../helper/Color";
@@ -16,7 +16,7 @@ class MoviesPosterandInfo extends PureComponent {
     const { data, navigation, type } = this.props;
     return (
       <View style={{ marginHorizontal: 16, marginVertical: 8 }}>
-        <TouchableWithoutFeedback
+        <TouchableOpacity
           onPress={() => {
             if (type === "tv") {
               navigation.navigate("TVDetail", { id: data.id });
@@ -38,7 +38,7 @@ class MoviesPosterandInfo extends PureComponent {
               </Text>
             </View>
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </View>
     );
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes, { object } from "prop-types";
-import { View, Text, FlatList, StyleSheet, TouchableNativeFeedback } from "react-native";
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 
 import MoviePoster from "../MoviePoster";
 import { normalize } from "../../helper/FontSize";
@@ -11,9 +11,9 @@ const MoviesRow = ({ data, title, navigation, type }) => {
     <View>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text style={Styles.text}>{title}</Text>
-        <TouchableNativeFeedback onPress={() => navigation.navigate("Movielist", { data, type, title })}>
+        <TouchableOpacity onPress={() => navigation.navigate("Movielist", { data, type, title })}>
           <Text style={Styles.textMore}>More</Text>
-        </TouchableNativeFeedback>
+        </TouchableOpacity>
       </View>
       <FlatList
         data={data}

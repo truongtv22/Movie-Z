@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TouchableWithoutFeedback } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
 
 import Icon from "react-native-vector-icons/Ionicons";
@@ -8,9 +8,9 @@ import { black } from "../../helper/Color";
 const BackIcon = ({ style, navigation, color }) => {
   return (
     <View style={style}>
-      <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <Icon name={"md-chevron-back"} size={32} color={color} />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     </View>
   );
 };

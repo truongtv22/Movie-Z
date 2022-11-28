@@ -8,7 +8,7 @@
   "eslint.options": {
     "extensinons": [".ts", ".js", ".tsx", ".jsx"]
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "prettier.printWidth": 125,

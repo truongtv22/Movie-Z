@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { View, Text, FlatList, TouchableWithoutFeedback } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import FastImage from "react-native-fast-image";
 
 import { getImageUrl } from "../../api/url";
@@ -27,7 +27,7 @@ const MovieSeason = ({ seasonData, navigation, movieid }) => {
 const SeasonItem = (data, navigation, seasonName, movieid) => {
   const imageUrl = getImageUrl(data.poster_path, "uri", "w185");
   return (
-    <TouchableWithoutFeedback
+    <TouchableOpacity
       onPress={() => navigation.navigate("Movieseason", { season: data, listSeason: seasonName, movieid: movieid })}
     >
       <View>
@@ -37,7 +37,7 @@ const SeasonItem = (data, navigation, seasonName, movieid) => {
         <Text style={{ fontFamily: "Montserrat-SemiBold", fontSize: 15, marginTop: 4, width: 100 }}>{data.name}</Text>
         <Text style={{ fontFamily: "Montserrat-Light", width: 100, fontSize: 14 }}>{`${data.episode_count} episodes`}</Text>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 };
 

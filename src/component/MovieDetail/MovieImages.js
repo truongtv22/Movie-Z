@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FastImage from "react-native-fast-image";
-import { View, Text, FlatList, Modal, TouchableWithoutFeedback } from "react-native";
+import { View, Text, FlatList, Modal, TouchableOpacity } from "react-native";
 import ImageViewer from "react-native-image-zoom-viewer";
 
 import { getImageUrl } from "../../api/url";
@@ -66,9 +66,9 @@ const imageComponent = (data, index, onPress) => {
   const style = { ...Styles.movieImages, ...{ width: 100 * data.aspect_ratio } };
 
   return (
-    <TouchableWithoutFeedback onPress={() => onPress(index)} style={[style, Styles.imagePlaceholder]}>
+    <TouchableOpacity onPress={() => onPress(index)} style={[style, Styles.imagePlaceholder]}>
       <FastImage source={imageUrl} style={style} />
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-native-modal";
-import { View, StyleSheet, TouchableWithoutFeedback, Text } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome5";
 
@@ -18,11 +18,11 @@ class MoviePlayButton extends Component {
 
   renderPlayButton = () => {
     return (
-      <TouchableWithoutFeedback onPress={this.toggleModal}>
+      <TouchableOpacity onPress={this.toggleModal}>
         <View style={_styles.wrapper}>
           <Icon name={"play"} size={20} color={white} style={_styles.icon} />
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   };
 
@@ -39,11 +39,11 @@ class MoviePlayButton extends Component {
           <Text style={{ fontFamily: "Montserrat-Regular", fontSize: 14 }}>{item.name}</Text>
           <Text style={{ fontFamily: "Montserrat-Light", fontSize: 12 }}>{item.type}</Text>
         </View>
-        <TouchableWithoutFeedback onPress={() => this.onPressPlay(item.key)}>
+        <TouchableOpacity onPress={() => this.onPressPlay(item.key)}>
           <View style={{ alignSelf: "flex-start", borderRadius: 6, overflow: "hidden" }}>
             <Text style={_styles.playText}>Play</Text>
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </View>
     ));
   };

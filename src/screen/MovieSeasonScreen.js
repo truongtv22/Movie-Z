@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Text, View, FlatList, StyleSheet, TouchableWithoutFeedback } from "react-native";
+import { Text, View, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import Modal from "react-native-modal";
 import FastImage from "react-native-fast-image";
 import { BlurView } from "@react-native-community/blur";
@@ -88,7 +88,7 @@ class MovieSeasonScreen extends Component {
     const { season_number } = this.state;
     return (
       <View style={{ margin: 8, flex: 1 }}>
-        <TouchableWithoutFeedback
+        <TouchableOpacity
           onPress={() => {
             this.onPressSeason(index);
           }}
@@ -103,7 +103,7 @@ class MovieSeasonScreen extends Component {
           >
             {item}
           </Text>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -127,7 +127,7 @@ class MovieSeasonScreen extends Component {
     const { listSeason } = this.props.route.params;
     return (
       <View style={{ padding: 16, paddingBottom: 8 }}>
-        <TouchableWithoutFeedback onPress={this.toggleModal}>
+        <TouchableOpacity onPress={this.toggleModal}>
           <View style={{ flexDirection: "row", alignSelf: "flex-start" }}>
             <Text
               style={{
@@ -140,7 +140,7 @@ class MovieSeasonScreen extends Component {
             </Text>
             <Icon name={"chevron-down"} size={24} style={{ marginLeft: 8 }} />
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -189,7 +189,7 @@ class MovieSeasonScreen extends Component {
             keyExtractor={(item) => item}
           />
         </View>
-        <TouchableWithoutFeedback onPress={this.toggleModal}>
+        <TouchableOpacity onPress={this.toggleModal}>
           <View
             style={{
               position: "absolute",
@@ -203,7 +203,7 @@ class MovieSeasonScreen extends Component {
           >
             <Icon name={"close"} size={32} color={white} />
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       </Modal>
     );
   };

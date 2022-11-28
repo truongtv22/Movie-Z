@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import FastImage from "react-native-fast-image";
 import { getImageUrl } from "../../api/url";
-import { View, Text, FlatList, TouchableWithoutFeedback } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { Styles } from "./Styles";
 import { useRoute } from "@react-navigation/native";
 
@@ -30,7 +30,7 @@ const Recommendations = (data, navigation, route) => {
   const imageUrl = getImageUrl(data.poster_path, "uri", "w185");
 
   return (
-    <TouchableWithoutFeedback onPress={() => navigation.push(route, { id: data.id })}>
+    <TouchableOpacity onPress={() => navigation.push(route, { id: data.id })}>
       <View>
         <View style={[Styles.imagePlaceholder, Styles.movieRecommImages]}>
           <FastImage source={imageUrl} style={Styles.movieRecommImages} />
@@ -40,7 +40,7 @@ const Recommendations = (data, navigation, route) => {
           {data.name}
         </Text>
       </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
   );
 };
 
