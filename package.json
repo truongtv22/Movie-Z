@@ -6,9 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "ios-se": "react-native run-ios --simulator=\"iPhone SE (2nd generation)\"",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
+    "start": "react-native start"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",
@@ -21,7 +19,7 @@
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.2",
-    "react-native-fast-image": "^8.3.2",
+    "react-native-fast-image": "^8.6.3",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-image-zoom-viewer": "^3.0.1",
     "react-native-linear-gradient": "^2.5.6",
@@ -30,7 +28,7 @@
     "react-native-safe-area-context": "^3.1.1",
     "react-native-screens": "^2.9.0",
     "react-native-splash-screen": "^3.2.0",
-    "react-native-status-bar-height": "^2.5.0",
+    "react-native-status-bar-height": "github:ovr/react-native-status-bar-height",
     "react-native-vector-icons": "^7.0.0",
     "react-native-webview": "^10.3.3"
   },
@@ -47,10 +45,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   }
 }
