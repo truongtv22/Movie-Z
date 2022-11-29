@@ -6,7 +6,7 @@ import MovieList from "../component/MovieList";
 import Screen from "../component/Screen";
 import { fetchFunctionListScreen } from "../helper/Types";
 import BackIcon from "../component/Utils/BackIcon";
-import { orange } from "../helper/Color";
+import { primary } from "../helper/Color";
 
 class MovieListScreen extends Component {
   state = {
@@ -73,7 +73,7 @@ const _styles = StyleSheet.create({
   titleBar: {
     width: 40,
     height: 5,
-    backgroundColor: orange,
+    backgroundColor: primary,
     marginTop: 4,
     alignSelf: "center",
   },

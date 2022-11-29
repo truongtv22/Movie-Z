@@ -9,7 +9,7 @@ import Screen from "../component/Screen";
 import { request } from "../api/api";
 import { getTvShowSeasonUrl, getImageUrl } from "../api/url";
 import { Styles } from "../component/MovieDetail/Styles";
-import { white, orange } from "../helper/Color";
+import { white, primary } from "../helper/Color";
 import BackIcon from "../component/Utils/BackIcon";
 
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -51,7 +51,7 @@ class MovieSeasonScreen extends Component {
             <Text style={{ fontFamily: "Montserrat-SemiBold", fontSize: 18 }} numberOfLines={2}>
               {data.name}
             </Text>
-            <View style={{ width: 30, height: 5, backgroundColor: orange, marginTop: 4 }} />
+            <View style={{ width: 30, height: 5, backgroundColor: primary, marginTop: 4 }} />
           </View>
         </View>
         <Text
@@ -97,7 +97,7 @@ class MovieSeasonScreen extends Component {
             style={{
               fontFamily: season_number === index ? "Montserrat-Bold" : "Montserrat-Regular",
               fontSize: season_number === index ? 24 : 16,
-              color: season_number === index ? orange : white,
+              color: season_number === index ? primary : white,
               textAlign: "center",
             }}
           >
@@ -197,7 +197,7 @@ class MovieSeasonScreen extends Component {
               bottom: 0,
               marginBottom: 64,
               padding: 8,
-              backgroundColor: orange,
+              backgroundColor: primary,
               borderRadius: 8,
             }}
           >
@@ -246,7 +246,7 @@ const _styles = StyleSheet.create({
   titleBar: {
     width: 40,
     height: 5,
-    backgroundColor: orange,
+    backgroundColor: primary,
     marginTop: 4,
     alignSelf: "center",
   },

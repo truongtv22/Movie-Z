@@ -6,7 +6,7 @@ import Screen from "../Screen.js";
 import MoviesRow from "./MoviesRow";
 import HomeHeader from "./HomeHeader";
 import { normalize } from "../../helper/FontSize";
-import { orange } from "../../helper/Color";
+import { primary } from "../../helper/Color";
 
 class HomeComponent extends Component {
   constructor(props) {
@@ -89,7 +89,7 @@ const Styles = StyleSheet.create({
   titleBar: {
     width: 30,
     height: 5,
-    backgroundColor: orange,
+    backgroundColor: primary,
     marginTop: 2,
     marginBottom: 12,
     marginLeft: 16,

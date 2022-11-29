@@ -5,7 +5,7 @@ import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-import { orange, white } from "../../helper/Color";
+import { primary, white } from "../../helper/Color";
 
 class MoviePlayButton extends Component {
   state = {
@@ -97,7 +97,7 @@ const _styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 12,
-    backgroundColor: orange,
+    backgroundColor: primary,
     justifyContent: "center",
   },
 
@@ -118,7 +118,7 @@ const _styles = StyleSheet.create({
   bar: {
     width: 40,
     height: 5,
-    backgroundColor: orange,
+    backgroundColor: primary,
     marginBottom: 24,
     borderRadius: 2,
     alignSelf: "center",
@@ -128,7 +128,7 @@ const _styles = StyleSheet.create({
   playText: {
     fontFamily: "Montserrat-SemiBold",
     textAlign: "right",
-    backgroundColor: orange,
+    backgroundColor: primary,
     color: white,
     paddingVertical: 4,
     paddingHorizontal: 8,

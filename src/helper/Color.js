@@ -1,3 +1,5 @@
+export const primary = "#00199F";
+
 export const white = "#ffffff";
 export const black = "#000000";
 export const orange = "#fc6b02";

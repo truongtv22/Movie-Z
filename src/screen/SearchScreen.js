@@ -4,7 +4,7 @@ import { Text, TextInput, View, StyleSheet } from "react-native";
 
 import Screen from "../component/Screen";
 import { requestSearchMovie, requestSearchTv } from "../api/api";
-import { orange, lightGray } from "../helper/Color";
+import { primary, lightGray } from "../helper/Color";
 import MovieList from "../component/MovieList";
 
 import Icon from "react-native-vector-icons/Ionicons";
@@ -106,7 +106,7 @@ const _styles = StyleSheet.create({
   titleBar: {
     width: 40,
     height: 5,
-    backgroundColor: orange,
+    backgroundColor: primary,
     marginTop: 4,
     marginBottom: 12,
     alignSelf: "center",

@@ -4,7 +4,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native
 
 import MoviePoster from "../MoviePoster";
 import { normalize } from "../../helper/FontSize";
-import { orange } from "../../helper/Color";
+import { primary } from "../../helper/Color";
 
 const MoviesRow = ({ data, title, navigation, type }) => {
   return (
@@ -59,6 +59,6 @@ const Styles = StyleSheet.create({
     marginBottom: 0,
     fontFamily: "Montserrat-SemiBold",
     alignSelf: "flex-end",
-    color: orange,
+    color: primary,
   },
 });
