@@ -77,7 +77,7 @@ class TVDetailScreen extends Component {
             </View>
           )}
         </View>
-        <MoviePlayButton videoData={videos} navigation={navigation} />
+        {/* <MoviePlayButton videoData={videos} navigation={navigation} /> */}
       </View>
     );
   };
